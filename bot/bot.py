@@ -693,9 +693,9 @@ def get_settings_menu(user_id: int):
             title = "✅ " + title
 
         buttons.append(
-            InlineKeyboardButton(title, callback_data=f"set_settings|{model_key}")
+            [InlineKeyboardButton(title, callback_data=f"set_settings|{model_key}")]
         )
-    reply_markup = InlineKeyboardMarkup([buttons])
+    reply_markup = InlineKeyboardMarkup(buttons)
 
     return text, reply_markup
 
